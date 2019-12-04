@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "1111:1111"
+    links:
+      - redis
+  redis:
+    image: "redis:alpine"
